@@ -23,7 +23,6 @@ def index(product_id, session: Session = Provide[Container.session]):
         Reviews.asin == Products.asin).where(
             Products.id == product_id)
 
-
     data = session.execute(query)
     data = data.all()
     if not data:

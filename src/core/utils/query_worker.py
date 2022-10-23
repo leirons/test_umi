@@ -1,6 +1,7 @@
 def sampling(selection, offset=0, limit=None):
     return selection[offset:(limit + offset if limit is not None else None)]
 
+
 def get_paginated_list(results, url, start, limit):
     start = int(start)
     limit = int(limit)
